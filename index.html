@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusKart</title>
+  <!-- Tailwind CSS (already added for you) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-indigo-50 text-slate-900">
+
+  <!-- TODO Build It 3: Navigation Bar
+       Add classes to <nav>, <h1> and the <div> of links -->
+  <nav class="bg-black  text-white px-6 py-4 flex justify-between items-center ">
+    
+    <h1 class="text-xl font-bold">
+      Campus<span class="text-amber-400">Kart</span>
+    </h1>
+    <div class="flex items-center gap-5 font-medium">
+      <a href="#products" class="hover:text-amber-400">Shop</a>
+      <a href="#cart" class="hover:text-amber-400">Cart (0)</a>
+    </div>
+  </nav>
+
+  <!-- TODO Build It 5: Responsive Sale Banner
+       Add classes to <section>, <h2>, <p> and <img>.
+       Remember: text-center on phone, md:text-left and md:justify-between on laptop -->
+  <section class="bg-blue-600 bg-cover bg-center">
+    <div class="flex flex-col items-center gap-8 bg-slate-950/60 px-6 py-12 text-center text-white md:flex-row md:justify-between md:text-left">
+    <div class="max-w-xl">
+      <h2 class="text-4xl font-extrabold md:text-5xl">College Sale</h2>
+      <p class="mt-3 text-white/90">Up to 50% off on bags, books and more</p>
+      <!-- TODO Build It 5: style this link like the Add to Cart button,
+           but in amber: bg-amber-400 hover:bg-amber-300 text-indigo-950
+           (add "inline-block mt-6" too) -->
+      <a href="#products"
+         class="mt-6 inline-block rounded-lg bg-amber-400 px-5 py-3 font-bold text-indigo-950 transition hover:bg-amber-300">Shop Now</a>
+    </div>
+    <img src="https://placehold.co/300x300/fbbf24/1e1b4b?text=50%25+OFF" alt="Sale"  class="w-36 rounded-xl shadow-xl md:w-48">
+  </section>
+
+  <!-- GIVEN: Why Shop With Us (already styled, nothing to do) -->
+  <section class="grid grid-cols-1 gap-4 px-6 py-6 text-center sm:grid-cols-3">
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <p class="text-2xl font-bold text-indigo-600">Free</p>
+      <p class="text-slate-500">Delivery</p>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <p class="text-2xl font-bold text-indigo-600">7-Day</p>
+      <p class="text-slate-500">Returns</p>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-sm">
+      <p class="text-2xl font-bold text-indigo-600">COD</p>
+      <p class="text-slate-500">Available</p>
+    </div>
+  </section>
+
+  <!-- TODO Build It 4: Responsive Product Grid
+       Add classes to this <section> -->
+  <section id="products" class="grid grid-cols-1 gap-6 px-6 py-8 sm:grid-cols-2 lg:grid-cols-4">
+
+    <!-- TODO Build It 1 + 2: Product Card
+         Style this FIRST card: <div>, <img>, <h3>, <p>, <span>, <button>.
+         Then copy the same classes to the other 3 cards. -->
+    <div class="rounded-xl bg-white p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <img src="https://placehold.co/400x300/e0e7ff/4338ca?text=Backpack" alt="Backpack" class="h-40 w-full rounded-lg object-cover">
+      <h3 class="mt-4 text-lg font-bold text-black-800" >Backpack</h3>
+      <p class="mt-2 text-sm font-bold text-black-700" >Rs. 799 <span class="ml-2 font-bold text-slate-500 line-through" >1299</span></p>
+      <button class="mt-4 w-full rounded-lg bg-indigo-600 px-4 py-2 font-semibold text-white transition hover:bg-indigo-800">Add to Cart</button>
+    </div>
+
+    <div class="rounded-xl bg-white p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <img src="https://placehold.co/400x300/e0e7ff/4338ca?text=Notebooks" alt="Notebooks" class="h-40 w-full rounded-lg object-cover">
+      <h3 class="mt-4 text-lg font-bold text-black-800" >Notebook Set</h3>
+      <p class="mt-2 text-sm font-bold text-black-700" >Rs. 199 <span class="ml-2 font-bold text-slate-500 line-through" >299</span></p>
+      <button class="mt-4 w-full rounded-lg bg-indigo-600 px-4 py-2 font-semibold text-white transition hover:bg-indigo-800">Add to Cart</button>
+    </div>
+
+    <div class="rounded-xl bg-white p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <img src="https://placehold.co/400x300/e0e7ff/4338ca?text=Bottle" alt="Water Bottle" class="h-40 w-full rounded-lg object-cover">
+      <h3 class="mt-4 text-lg font-bold text-black-800" >Water Bottle</h3>
+      <p class="mt-2 text-sm font-bold text-black-700" >Rs. 349 <span class="ml-2 font-bold text-slate-500 line-through" >499</span></p>
+      <button class="mt-4 w-full rounded-lg bg-indigo-600 px-4 py-2 font-bold text-white transition hover:bg-indigo-800">Add to Cart</button>
+    </div>
+
+    <div class="rounded-xl bg-white p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <img src="https://placehold.co/400x300/e0e7ff/4338ca?text=Earphones" alt="Earphones" class="h-40 w-full rounded-lg object-cover">
+      <h3 class="mt-4 text-lg font-bold text-black-800" >Earphones</h3>
+      <p class="mt-2 text-sm font-bold text-black-700" >Rs. 599 <span class="ml-2 font-bold text-slate-500 line-through" >999</span></p>
+      <button class="mt-4 w-full rounded-lg bg-indigo-600 px-4 py-2 font-bold text-white transition hover:bg-indigo-800">Add to Cart</button>
+    </div>
+
+    <div class="rounded-xl bg-white p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <img src="https://placehold.co/400x300/e0e7ff/4338ca?text=Laptop+Sleeve" alt="Laptop Sleeve" class="h-40 w-full rounded-lg object-cover">
+      <h3 class="mt-4 text-lg font-bold text-slate-800">Laptop Sleeve</h3>
+      <p class="mt-2 text-sm font-bold text-slate-700">Rs. 499 <span class="ml-2 font-bold text-slate-500 line-through">Rs. 799</span></p>
+      <button class="mt-4 w-full rounded-lg bg-indigo-600 px-4 py-2 font-semibold text-white transition hover:bg-indigo-800"> Add to Cart </button>
+    </div>
+    
+    <div class="rounded-xl bg-white p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <img src="https://placehold.co/400x300/e0e7ff/4338ca?text=Wireless+Mouse"alt="Wireless Mouse" class="h-40 w-full rounded-lg object-cover">
+      <h3 class="mt-4 text-lg font-bold text-slate-800">Wireless Mouse</h3>
+      <p class="mt-2 text-sm font-bold text-slate-700">Rs. 399<span class="ml-2 font-bold text-slate-500 line-through">Rs. 599</span> </p>
+      <button class="mt-4 w-full rounded-lg bg-indigo-600 px-4 py-2 font-semibold text-white transition hover:bg-indigo-800">Add to Cart</button>
+    </div>
+
+    <div class="rounded-xl bg-white p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <img src="https://placehold.co/400x300/e0e7ff/4338ca?text=USB+Drive"alt="USB Drive" class="h-40 w-full rounded-lg object-cover">
+      <h3 class="mt-4 text-lg font-bold text-slate-800">USB Drive</h3>
+      <p class="mt-2 text-sm font-bold text-slate-700">Rs. 299<span class="ml-2 font-bold text-slate-500 line-through">Rs. 449</span></p>
+      <button class="mt-4 w-full rounded-lg bg-indigo-600 px-4 py-2 font-semibold text-white transition hover:bg-indigo-800">Add to Cart</button>
+    </div>
+
+    <div class="rounded-xl bg-white p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+      <img src="https://placehold.co/400x300/e0e7ff/4338ca?text=Desk+Lamp" alt="Desk Lamp" class="h-40 w-full rounded-lg object-cover">
+      <h3 class="mt-4 text-lg font-bold text-slate-800">Desk Lamp</h3>
+      <p class="mt-2 text-sm font-bold text-slate-700">Rs. 699<span class="ml-2 font-bold text-slate-500 line-through">Rs. 999</span></p>
+      <button class="mt-4 w-full rounded-lg bg-indigo-600 px-4 py-2 font-semibold text-white transition hover:bg-indigo-800">Add to Cart</button>
+    </div>
+
+  </section>
+
+  <!-- GIVEN: Footer (already styled, nothing to do) -->
+  <footer class="bg-indigo-950 text-indigo-200 py-6 text-center">
+    <p>&copy; 2026 CampusKart</p>
+    <div class="flex justify-center gap-6 mt-2">
+      <a href="#" class="hover:text-amber-400">About</a>
+      <a href="#" class="hover:text-amber-400">Contact</a>
+    </div>
+  </footer>
+
+</body>
+</html>
